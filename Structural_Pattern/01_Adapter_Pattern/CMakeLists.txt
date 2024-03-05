@@ -5,8 +5,8 @@ SET(CMAKE_CXX_COMPILER "g++")
 
 set(source
     main.cpp
-    adapter_factory.cpp
-    adapter_factory.hpp
+    adapter_pattern.cpp
+    adapter_pattern.hpp
 )
 
-#add_executable(01_Adapter_Pattern ${source})
+add_executable(01_Adapter_Pattern ${source})
