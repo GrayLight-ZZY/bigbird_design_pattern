@@ -1,7 +1,8 @@
 SET(CMAKE_VERBOSE_MAKEFILE ON)
 CMAKE_MINIMUM_REQUIRED (VERSION 3.14.0)
 MESSAGE(STATUS "CMAKE_VERSION:${CMAKE_VERSION}")
-add_definitions(-G "Unix Makefiles")
+add_definitions(-Werror)
+#add_definitions(-G "Unix Makefiles")
 #SET(CMAKE_GENERATOR "Unix Makefiles")
 #SET(CMAKE_NO_CACHE TRUE)
 
@@ -23,6 +24,12 @@ endif()
 #************************************************
 # Common Head File Path
 #************************************************
+SET(FRAMEWORK_COMMON_INC_LIST
+    "${CMAKE_CURRENT_SOURCE_DIR}/include/common"
+)
+
+MESSAGE(STATUS "ADD FRAMEWORK_COMMON_INC_LIST for Framework:"+${CMAKE_CURRENT_SOURCE_DIR})
+INCLUDE_DIRECTORIES(${FRAMEWORK_COMMON_INC_LIST})
 
 #************************************************
 # Add Libs for Linking
@@ -45,6 +52,6 @@ MESSAGE(STATUS "INSTALL_ROOT_nto " ${INSTALL_ROOT_nto})
 #************************************************
 # Add Modules for Building
 #************************************************
-#ADD_SUBDIRECTORY(Behavioral_Pattern)
-#ADD_SUBDIRECTORY(Creational_Pattern)
+ADD_SUBDIRECTORY(Behavioral_Pattern)
+ADD_SUBDIRECTORY(Creational_Pattern)
 ADD_SUBDIRECTORY(Structural_Pattern)

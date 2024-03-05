@@ -5,7 +5,8 @@
 using namespace std;
 
 int main() {
-    Operation *oper;
+    cout << "This is 00_Simple_Factory of Stractual_Pattern!" << endl;
+    Operation* oper;
     double number_A = 0;
     double number_B = 0;
     std::string operation;
@@ -19,9 +20,9 @@ int main() {
     oper = OperationFactory::createOperate(operation);
     if (oper == nullptr) {
     }
+
     oper->set_number_A(number_A);
     oper->set_number_B(number_B);
-
     cout << "the result is :" << oper->get_Result() << endl;
     return 0;
 }

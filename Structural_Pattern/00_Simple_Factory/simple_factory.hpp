@@ -11,13 +11,13 @@ class Operation {
 
    public:
     double get_number_A() { return this->number_A; }
-    double set_number_A(double value) { this->number_A = value; }
-    double get_number_B() { return this->number_B; }
-    double set_number_B(double value) { this->number_B = value; }
+    void set_number_A(double value) { this->number_A = value; }
+    double get_number_B() { 
+        return this->number_B; }
+    void set_number_B(double value) { this->number_B = value; }
 
     virtual double get_Result() = 0;
 };
-
 class OperationFactory {
    public:
     static Operation* createOperate(const string& oper);
@@ -29,7 +29,7 @@ class OperationAdd : public Operation {
 };
 
 class OperationSub : public Operation {
-   public:
+    public:
     double get_Result() override;
 };
 

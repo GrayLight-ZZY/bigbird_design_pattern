@@ -2,10 +2,11 @@ rm -rf build
 
 [ -d build ] || mkdir build
 cd ./build
-cmake ../
+cmake .. -G "Unix Makefiles"
 
 make VERBOSE=1
 
-make install
+#make install
+make
 
 cd ..

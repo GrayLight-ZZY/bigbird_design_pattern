@@ -5,8 +5,8 @@ SET(CMAKE_CXX_COMPILER "g++")
 
 set(source
     main.cpp
-    simple_factory.cpp
-    simple_factory.hpp
+    strategy.hpp
+    strategy.cpp
 )
 
-add_executable(00_Simple_Factory ${source})
+add_executable(01_Strategy_Pattern ${source})

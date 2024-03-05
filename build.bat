@@ -15,7 +15,8 @@ REM 使用 make 编译项目（显示详细输出）
 make VERBOSE=1
 
 REM 安装项目
-make install
+REM make install
+make
 
 REM 返回上级目录
 cd ..
