@@ -5,3 +5,4 @@ MESSAGE(STATUS "--- current Creational_Pattern dir:${CMAKE_CURRENT_SOURCE_DIR}")
 
 SET(EXECUTABLE_OUTPUT_PATH "${CMAKE_INSTALL_PREFIX}bin/design_pattern/Structural_Pattern/")
 ADD_SUBDIRECTORY(01_Adapter_Pattern)
+ADD_SUBDIRECTORY(02_Decorator_Pattern)

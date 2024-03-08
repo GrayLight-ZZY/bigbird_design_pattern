@@ -6,6 +6,11 @@ add_definitions(-Werror)
 #SET(CMAKE_GENERATOR "Unix Makefiles")
 #SET(CMAKE_NO_CACHE TRUE)
 
+# SET(CMAKE_SYSTEM_NAME Linux)
+# SET(CMAKE_SYSTEM_VERSION 1)
+# SET(Demo_VERSION_MAJOR 1)
+# SET(Demo_VERSION_MINOR 0)
+
 PROJECT(design_patterns)
 
 #************************************************
